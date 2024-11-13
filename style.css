@@ -23,3 +23,7 @@ body {
     height: 600px;
     border: 1px solid black;
 }
+
+.colored-cell {
+    background-color: black;
+}

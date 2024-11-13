@@ -1,5 +1,9 @@
 const cellContainer = document.querySelector("#divs-container");
 
+function colorCell(cellEvent) {
+    cellEvent.target.classList.add("colored-cell");
+}
+
 function createGrid(size) {
     cellContainer.innerHTML = "";
     // Container is square //
@@ -11,8 +15,11 @@ function createGrid(size) {
             const cell = document.createElement("div");
             cell.style.width = `${cellWidth}px`;
             cell.style.height = `${cellHeight}px`;
+            cell.addEventListener("mouseenter", colorCell);
             cellContainer.appendChild(cell);
         }
     }
 }
+
+createGrid(16);
 
